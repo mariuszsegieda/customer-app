@@ -1,0 +1,21 @@
+server:
+  port: 8081
+
+spring:
+  test:
+    database:
+      replace: none
+  jpa:
+#    hibernate:
+#      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: false
+    open-in-view: false
+  datasource:
+    url: jdbc:mysql://credit-db:3306/CustomerDB?autoReconnect=true&useUnicode=yes&characterEncoding=UTF-8&useSSL=false
+    username: customer_user
+    password: 'customer_pass'
+    driver-class-name: com.mysql.jdbc.Driver
+    hikari:
+      idle-timeout: 28000
+      validation-timeout: 28000
